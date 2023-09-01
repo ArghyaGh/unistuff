@@ -1,7 +1,61 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-    int i;
-    
-    return 0;
+	 float scores;
+
+     printf("Enter your scores: ");
+
+     scanf("%f", &scores);
+
+     if (scores >= 80 && scores <= 100)
+		{
+		printf("Your grade is A+ and your grade point is 4.00 .");
+		}
+        else if (scores >= 75 && scores <= 79)
+
+        {
+         printf("Your grade is A and your grade point is 3.75 .");
+        }
+        else if (scores >= 70 && scores <= 74)
+
+        {
+         printf("Your grade is A- and your grade point is 3.50 .");
+        }
+        else if (scores >= 65 && scores <= 69 )
+
+        {
+         printf("Your grade is B+ and your grade point is 3.25 .");
+        }
+        else if (scores >= 60 && scores <= 64)
+
+        {
+         printf("Your grade is B and your grade point is 3.00 .");
+        }
+        else if (scores >= 55 && scores <= 59)
+
+        {
+         printf("Your grade is B- and your grade point is 2.75 .");
+        }
+        else if (scores >= 50 && scores <= 54)
+
+        {
+         printf("Your grade is C+ and your grade point is 2.50.");
+        }
+         else if (scores >=45 && scores <= 49)
+
+        {
+         printf("Your grade is C and your grade point is 2.25.");
+        }
+         else if (scores >= 40 && scores <= 44)
+
+        {
+         printf("Your grade is D and your grade point is 2.00.");
+        }
+         else if (scores >= 40 && scores <= 0)
+
+        {
+         printf("Your grade is F and your grade point is NOTHING.");
+        }
+        else {printf("Invalid score entered");}
+ return 0;
 }
