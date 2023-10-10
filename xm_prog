@@ -1,0 +1,11 @@
+#include<stdio.h>
+int Bye(int n);
+void main()
+{
+    int n = 10;
+    printf("%d", Bye(n));
+}
+int Bye(int n)
+{
+    if (n > 0) {return (n+Bye(n-2));}
+}
