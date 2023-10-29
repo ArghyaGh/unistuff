@@ -1,0 +1,63 @@
+#include<stdio.h>
+
+int main(){
+    int dimension;
+    printf("Enter the dimension of your square matrix: ");
+    scanf("%d", &dimension); printf("\n");    
+    printf("Thank You for inputting the dimensions of your square matrix!");
+    printf("\n");
+    printf("Now Scanning the matrix entries...");
+    printf("\n");
+    int matrix[dimension][dimension];
+    //matrix input
+    for (int k = 0; k < dimension; k++) {
+        for (int l = 0; l < dimension; l++) {
+            printf("Enter the %d %d value:-  ", k, l); 
+            scanf("%d", &matrix[k][l]);
+        }
+    }
+    printf("\n");
+    printf("The matrix is below:- ");
+    printf("\n");
+    //matrix output
+    for (int k = 0; k < dimension; k++) {
+        for (int l = 0; l < dimension; l++) {
+            printf("%d", matrix[k][l]);
+            printf(" ");
+        }
+        printf("\n");
+    }
+    //sum of all values
+    int sum = 0;
+    for (int k = 0; k < dimension; k++) {
+        for (int l = 0; l < dimension; l++) {
+            sum += matrix[k][l];
+        }
+    }
+    printf("\n");
+    printf("Sum of all values:- %d", sum);
+    //sum of diagonal values
+    int diagonal = 0;
+    for (int k = 0; k < dimension; k++) {
+        for (int l = 0; l < dimension; l++) {
+            if(k == l) {diagonal += matrix[k][l];}
+        }
+    }
+    printf("\n");
+    printf("\n");
+    printf("Sum of diagonal values:- %d", diagonal);
+    //sum of (1st row + 1st column)
+    int L = 0;
+    for (int k = 0; k < dimension; k++) {
+        for (int l = 0; l < dimension; l++) {
+            if(k == 0) {L += matrix[k][l];} // row summation
+            if(k > 0 && l == 0) {L += matrix[k][l];} // column summation (from 2nd column)
+        }
+    }
+    printf("\n");
+    printf("\n");
+    printf("Sum of Rows :- %d", L);
+    printf("\n");
+    printf("done!");
+    return 0;
+}
